@@ -13,14 +13,15 @@ const MODULE_PATHS = [
 
 const commonConfigs = {
   target: 'web',
-  output: {
-    path: distDir,
-    filename: '[name].js',
-    chunkFilename: '[name].chunk.js'
-  },
   resolve: {
     modules: MODULE_PATHS,
     extensions: ['.js', '.jsx']
+  },
+  output: {
+    path: distDir,
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
+    globalObject: 'this'
   },
   module: {
     rules

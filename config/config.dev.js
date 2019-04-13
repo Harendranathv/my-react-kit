@@ -15,7 +15,7 @@ const webpackConfigs = {
       "react-hot-loader/patch",
       "webpack-dev-server/client?http://localhost:" + PORT + "/",
       "webpack/hot/only-dev-server",
-      path.join(srcDir, 'client.js'),
+      path.join(srcDir, 'app/client.js'),
     ]
   },
   devServer: {
@@ -27,7 +27,8 @@ const webpackConfigs = {
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(srcDir, 'index.html')
+      template: path.join(srcDir, 'app/index.html'),
+      // inject: false
     })
   ]
 }

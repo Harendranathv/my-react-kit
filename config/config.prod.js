@@ -2,12 +2,12 @@ const webpack = require('webpack')
 const path = require('path')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
-const { srcDir } = require('./dirs')
+const { srcDir, distDir } = require('./dirs')
 
 const webpackConfigs = {
   mode: 'production',
   entry: {
-    app: path.join(srcDir, 'client.js')
+    app: path.join(srcDir, 'app/client.js')
   },
   stats: {
     colors: false,

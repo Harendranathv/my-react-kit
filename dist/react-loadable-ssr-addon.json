@@ -1,0 +1,45 @@
+{
+  "entrypoints": [
+    "app"
+  ],
+  "origins": {
+    "app": [
+      0
+    ],
+    "./FooterView": [
+      1
+    ],
+    "./HeaderView": [
+      2
+    ]
+  },
+  "assets": {
+    "0": {
+      "js": [
+        {
+          "file": "app.js",
+          "hash": "8497a8d6d825d5c31c3b",
+          "publicPath": "app.js"
+        }
+      ]
+    },
+    "1": {
+      "js": [
+        {
+          "file": "footer.chunk.js",
+          "hash": "ba5a93908cef270a32a4",
+          "publicPath": "footer.chunk.js"
+        }
+      ]
+    },
+    "2": {
+      "js": [
+        {
+          "file": "header.chunk.js",
+          "hash": "cc45716f9df2b1c646be",
+          "publicPath": "header.chunk.js"
+        }
+      ]
+    }
+  }
+}
