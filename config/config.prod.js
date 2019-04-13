@@ -1,12 +1,10 @@
 const webpack = require('webpack')
 const path = require('path')
-const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
-const common = require('./config.common')
 const { srcDir } = require('./dirs')
 
-const webpackConfigs = merge.smart(common, {
+const webpackConfigs = {
   mode: 'production',
   entry: {
     app: path.join(srcDir, 'client.js')
@@ -48,6 +46,6 @@ const webpackConfigs = merge.smart(common, {
     },
     runtimeChunk: false
   }
-})
+}
 
 module.exports = webpackConfigs

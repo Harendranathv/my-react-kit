@@ -1,15 +1,13 @@
 const webpack = require('webpack')
 const path = require('path')
-const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-const common = require('./config.common')
 const { srcDir, distDir } = require('./dirs')
 
 const PORT = 3000
 
-const webpackConfigs = merge.smart(common, {
+const webpackConfigs = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
@@ -32,6 +30,6 @@ const webpackConfigs = merge.smart(common, {
       template: path.join(srcDir, 'index.html')
     })
   ]
-})
+}
 
 module.exports = webpackConfigs

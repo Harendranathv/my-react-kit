@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev yarn run start:dev",
-    "start:dev": "yarn run build:dev && webpack-dev-server --config=config/config.dev.js",
+    "start:dev": "yarn run build:dev && webpack-dev-server --config=config",
     "start:prod": "yarn run build:prod && babel-node src/server.js",
     "build:dev": "yarn run clean && yarn run compile:dev",
     "build:prod": "yarn run clean && yarn run compile:prod",
-    "compile:dev": "webpack -p --progress --config=config/config.dev.js --mode development",
-    "compile:prod": "webpack -p --progress --config=config/config.prod.js --mode production",
+    "compile:dev": "webpack -p --progress --config=config --mode development",
+    "compile:prod": "webpack -p --progress --config=config --mode production",
     "clean": "rm -rf ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
