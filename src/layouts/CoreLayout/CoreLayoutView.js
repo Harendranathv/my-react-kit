@@ -7,7 +7,7 @@ class CoreLayoutView extends Component {
     return (
       <Fragment>
         <Header />
-        test layout lol
+        test layout lol..
         <Footer />
       </Fragment>
     )
