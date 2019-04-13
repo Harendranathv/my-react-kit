@@ -12,7 +12,8 @@
     "compile": "webpack --config=config",
     "server": "babel-node ./src/app",
     "clean": "rm -rf ./dist/",
-    "test": "yarn run eslint --fix ./src && yarn run jest"
+    "test": "yarn run eslint --fix ./src && yarn run jest",
+    "check": "yarn run ncu"
   },
   "author": "Nasser Maronie",
   "devDependencies": {
@@ -39,9 +40,9 @@
     "react-hot-loader": "4.8.3",
     "redux-devtools-extension": "2.13.8",
     "uglifyjs-webpack-plugin": "2.1.2",
-    "webpack": "4.29.6",
+    "webpack": "4.30.0",
     "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.2.1",
+    "webpack-dev-server": "3.3.1",
     "webpack-hot-middleware": "2.24.3",
     "webpack-merge": "4.2.1"
   },
@@ -49,6 +50,7 @@
     "emotion": "10.0.9",
     "emotion-server": "10.0.9",
     "express": "4.16.4",
+    "npm-check-updates": "3.1.7",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
