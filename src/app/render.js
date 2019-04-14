@@ -67,7 +67,7 @@ const renderHtml = ({
         <div id="root">${root}</div>
         ${initScript}
         ${scripts.map(script => {
-          return `<script async src="/dist/${script.file}"></script>`
+          return `<script src="/dist/${script.file}"></script>`
         }).join('\n')}
       </body>
     </html>`

@@ -1,3 +1,6 @@
-import RouterStatus from './RouterStatus'
-
-export default RouterStatus
+import Loadable from 'react-loadable'
+import Loading from '../Loading'
+export default Loadable({
+  loader: () => import(/* webpackChunkName: "router-status" */'./RouterStatus'),
+  loading: Loading
+})

@@ -3,11 +3,12 @@ import path from 'path'
 import render from './render'
 
 const server = express()
+const distUrl = '/dist/'
+const publicUrl = '/public/'
+server.use(distUrl, express.static(path.resolve(process.cwd(), 'dist')))
+server.use(publicUrl, express.static(path.resolve(process.cwd(), 'public')))
 
-server.use('/dist', express.static(path.resolve(process.cwd(), 'dist')))
-server.use('/public', express.static(path.resolve(process.cwd(), 'public')))
-
-server.get('*', (req, res) => {
+server.get('/*', (req, res) => {
   return render({ req, res })
     .then(({ html, context }) => {
       if (context.status) {

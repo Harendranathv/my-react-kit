@@ -45,7 +45,8 @@ class CoreLayoutView extends Component {
             sunt in culpa qui officia deserunt mollit anim id est laborum.
           `} />
           <meta name="robots" content="index, follow" />
-          <link rel="shortcut icon" href="https://ecs7.tokopedia.net/img/favicon.ico" />
+          <link rel="manifest" href="/public/manifest.json" />
+          <link rel="shortcut icon" href="/public/favicon.ico" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:700" />
         </Helmet>
         <Header />

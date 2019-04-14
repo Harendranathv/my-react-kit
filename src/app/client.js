@@ -9,6 +9,8 @@ import createStore, { getInitialData } from '../store'
 
 import CoreLayout from '../layouts/CoreLayout'
 
+import * as serviceWorker from './serviceWorker'
+
 const render = (App, store, targetDom) => {
   hydrate(
     <HelmetProvider>
@@ -44,3 +46,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     })
   }
 }
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.register()
