@@ -14,7 +14,6 @@ export const publicAssets = {
     sorry: path.join(assetsPath, 'img/placeholder-sorry.webp'),
     marker: path.join(assetsPath, 'img/placeholder-marker.png'),
     location: path.join(assetsPath, 'img/placeholder-location.png'),
-    lahan: [1, 2, 3, 4, 5, 6].map(lahan => path.join(assetsPath, 'img/lahan-' + lahan)),
     map: path.join(assetsPath, 'img/placeholder-map.png'),
     wishlistActive: path.join(assetsPath, 'img/placeholder-wishlist-active.png'),
     wishlistInActive: path.join(assetsPath, 'img/placeholder-wishlist-inactive.png'),

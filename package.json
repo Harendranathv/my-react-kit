@@ -1,6 +1,6 @@
 {
   "name": "my-react-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My simple SSR React-kit with hot reload and code splitting..",
   "main": "index.js",
   "scripts": {
