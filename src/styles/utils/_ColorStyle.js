@@ -1,11 +1,16 @@
+// https://material-ui.com/style/color/
+
+import grey from '@material-ui/core/colors/grey'
+import red from '@material-ui/core/colors/red'
+import teal from '@material-ui/core/colors/teal'
+import orange from '@material-ui/core/colors/orange'
+import green from '@material-ui/core/colors/green'
+
 const colors = {
   transparent: 'transparent',
 
-  /* Base */
+  /* White */
   whiteBase: '#FFFFFF',
-  greenBase: '#42B549',
-  orangeBase: '#FF5722',
-  redBase: '#D50000',
 
   /* Black */
   blackBase: 'rgba(0, 0, 0, 0.7)',
@@ -13,23 +18,26 @@ const colors = {
   blackLighter: 'rgba(0, 0, 0, 0.38)',
   blackDisabled: 'rgba(0, 0, 0, 0.18)',
 
-  /* Green */
-  greenApple: '#399C3F',
-  greenFeta: '#F3FEF3',
-
-  /* Gray */
-  grayAlabaster: '#F8F8F8',
-  grayWildSand: '#F6F6F6',
-  graySeashell: '#F1F1F1',
-  grayAlto: '#E0E0E0',
-  grayGallery: '#EFEFEF',
+  /* Grey */
+  greyBase: grey[500],
+  greyWildSand: grey[400],
+  greySeashell: grey[300],
+  greyAlto: grey[200],
+  greyGallery: grey[100],
 
   /* Red */
-  redAlizarinCrimson: '#EA212D',
-  redCarnation: '#F05F68',
+  redBase: red[500],
+  redAlizarinCrimson: red[700],
 
-  /* Yellow */
-  yellowAmber: '#FFC107'
+  /* Teal */
+  tealBase: teal[500], // #009688
+  tealBaseTransparent: 'rgba(0, 150, 136, 0.7)',
+
+  /* Orange */
+  orangeBase: orange[900],
+
+  /* Green */
+  greenBase: green[600]
 }
 
 export { colors }

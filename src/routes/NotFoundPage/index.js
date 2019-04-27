@@ -1,9 +1,4 @@
-import Loadable from 'react-loadable'
-import Loading from '../../components/Loading'
-const NotFoundPage = Loadable({
-  loader: () => import(/* webpackChunkName: "not-found" */'./NotFoundPage'),
-  loading: Loading
-})
+import NotFoundPage from './NotFoundPage'
 
 export default {
   path: '**',

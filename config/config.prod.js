@@ -7,7 +7,7 @@ const { srcDir, distDir } = require('./dirs')
 const webpackConfigs = {
   mode: 'production',
   entry: {
-    app: path.join(srcDir, 'app/client.js')
+    app: ['babel-polyfill', path.join(srcDir, 'app/client.js')]
   },
   stats: {
     colors: false,

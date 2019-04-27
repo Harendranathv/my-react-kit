@@ -3,11 +3,12 @@ const path = require('path')
 const ReactLoadableSSRAddon = require('react-loadable-ssr-addon')
 const { GenerateSW } = require('workbox-webpack-plugin')
 
-const { srcDir, distDir, modulesDir } = require('./dirs')
+const { srcDir, distDir, publicDir, modulesDir } = require('./dirs')
 const rules = require('./rules')
 
 const MODULE_PATHS = [
   distDir,
+  publicDir,
   srcDir,
   modulesDir,
 ]
@@ -22,7 +23,8 @@ const commonConfigs = {
     path: distDir,
     filename: '[name].[hash].js',
     chunkFilename: '[name].[hash].chunk.js',
-    globalObject: 'this'
+    globalObject: 'this',
+    publicPath: '/dist/'
   },
   module: {
     rules
@@ -35,8 +37,7 @@ const commonConfigs = {
       filename: 'react-loadable-ssr-addon.json',
     }),
     new GenerateSW({
-      swDest: 'sw.js',
-      importWorkboxFrom: 'local'
+      swDest: 'sw.js'
     })
   ]
 }

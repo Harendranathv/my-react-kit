@@ -74,25 +74,25 @@ const renderHtml = ({
   return { html, context }
 }
 
-const render = (expressCtx) => {
+const render = async expressCtx => {
   const { req } = expressCtx
   const store = createStore()
-  let helmetCtx = {}, context
+  let helmetCtx = {}, context, res
   const promises = getInitialData({ req, routes, store })
-  return Promise.all(promises)
-    .catch(err => {
-      console.error('Error getInitialData:\n', err)
-    })
-    .then(() => {
-      context = {}
-      const data = {
-        expressCtx,
-        store,
-        context,
-        helmetCtx
-      }
-      return renderHtml(data)
-    })
+  try {
+    await Promise.all(promises)
+    context = {}
+    const data = {
+      expressCtx,
+      store,
+      context,
+      helmetCtx
+    }
+    res = renderHtml(data)
+    return res
+  } catch (err) {
+    console.error('Error getInitialData:\n', err)
+  }
 }
 
 export default render

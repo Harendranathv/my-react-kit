@@ -66,10 +66,56 @@ const coreStyle = injectGlobal`
     list-style: none;
   }
 
-  .clearfix::before,
-  .clearfix::after {
-    content: " ";
-    display: table;
+  .clearfix {
+    clear: both;
+    &::before,
+    &::after {
+      content: " ";
+      display: table;
+    }
+  }
+
+  .fullwidth {
+    width: 100%;
+  }
+
+  .img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .overlay {
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    z-index: 99;
+    &__100 {
+      z-index: 100;
+    }
+    &__101 {
+      z-index: 101;
+    }
+    &__102 {
+      z-index: 102;
+    }
+    // pointer-events: none;
+  }
+
+  .button {
+    &__close {
+      position: fixed;
+      top: ${variables.baseSpacing}px;
+      right: ${variables.baseSpacing}px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      // background-color: rgba(255,255,255,0.7);
+      display: inline-block;
+      z-index: 101;
+      box-shadow: -3px 3px 10px rgba(0,0,0,0.3);
+    }
   }
 `
 

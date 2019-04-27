@@ -20,3 +20,24 @@ export const scrollTo = (target = 'TOP', counter = 100) => {
   }
   smoothScroll(offset(target) - counter)
 }
+
+export const getScrollData = (w, d) => {
+  let _h = d.documentElement,
+  _b = d.body,
+  _st = 'scrollTop',
+  _sh = 'scrollHeight',
+  __st = w.pageYOffset || d.documentElement.scrollTop
+
+  let scrollDir = __st <= 0 ? 'top' : 'down'
+
+  let scrollPercent = Math.floor((_h[_st]||_b[_st]) / ((_h[_sh]||_b[_sh]) - _h.clientHeight) * 100)
+
+  return {
+    direction: scrollDir,
+    percentage: scrollPercent
+  }
+}
+
+export const isTouchDevice = d => {
+  return 'ontouchstart' in d.documentElement;
+}

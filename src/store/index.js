@@ -4,8 +4,8 @@ import thunk from 'redux-thunk'
 import { matchRoutes } from 'react-router-config'
 import { UAParser } from 'ua-parser-js'
 
-import reducer from '../reducers'
-import { initUserAgent } from '../reducers/user-agent'
+import reducer from './reducers'
+import { initUserAgent } from './reducers/user-agent'
 
 const devMode = process.env.NODE_ENV && process.env.NODE_ENV === 'development'
 
@@ -42,9 +42,9 @@ export default (initialState = {}) => {
   )
 
   if (module.hot) {
-    module.hot.accept('../reducers', () => {
+    module.hot.accept('./reducers', () => {
       console.log('Root reducer updated')
-      const nextRootReducer = require('../reducers')
+      const nextRootReducer = require('./reducers')
       store.replaceReducer(nextRootReducer)
     })
   }

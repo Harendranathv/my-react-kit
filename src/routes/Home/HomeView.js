@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { compose } from 'recompose'
 import { withRouter } from 'react-router-dom'
 
-import { toggleLogin } from '../../reducers/user'
+import { toggleLogin } from '../../store/reducers/user'
 
 class HomeView extends Component {
   static propTypes = {

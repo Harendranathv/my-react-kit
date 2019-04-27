@@ -1,12 +1,8 @@
-import Loadable from 'react-loadable'
-import Loading from '../../components/Loading'
-const HomeView = Loadable({
-  loader: () => import(/* webpackChunkName: "page-home" */'./HomeView'),
-  loading: Loading
-})
+import HomeView from './HomeView'
+import { HOME_PATH } from '../../constants/url'
 
 export default {
-  path: '/',
+  path: HOME_PATH,
   component: HomeView,
   exact: true,
   auth: true
